@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "ECommerce.Api.Orders.Controllers.OrdersController",
+    "Method": "GetOrdersAsync",
+    "RelativePath": "api/orders/{customerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
