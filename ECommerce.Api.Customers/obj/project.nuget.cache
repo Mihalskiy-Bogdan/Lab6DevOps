@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "a3RYTGOFYRE=",
+  "dgSpecHash": "ZTsjD14C4Gg=",
   "success": true,
   "projectFilePath": "E:\\course\\ECommerce\\ECommerce.Api.Customers\\ECommerce.Api.Customers.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,8 @@
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\11.0.0\\microsoft.entityframeworkcore.abstractions.11.0.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\11.0.0\\microsoft.entityframeworkcore.analyzers.11.0.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\11.0.0\\microsoft.entityframeworkcore.inmemory.11.0.0.nupkg.sha512",
-    "C:\\Users\\PC\\.nuget\\packages\\microsoft.openapi\\2.13.0\\microsoft.openapi.2.13.0.nupkg.sha512"
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.openapi\\2.13.0\\microsoft.openapi.2.13.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.24.2-preview.1\\microsoft.visualstudio.azure.containers.tools.targets.1.24.2-preview.1.nupkg.sha512"
   ],
   "logs": [
     {

@@ -1,0 +1,83 @@
+{
+  "ContentRoots": [
+    "/src/ECommerce.Api.Customers/obj/Debug/net11.0/jsmodules/",
+    "/src/ECommerce.Api.Customers/obj/Debug/net11.0/compressed/",
+    "/src/ECommerce.Api.Customers/obj/Debug/net11.0/HotReload/"
+  ],
+  "Root": {
+    "Children": {
+      "ECommerce.Api.Customers.modules.json": {
+        "Children": null,
+        "Asset": {
+          "ContentRootIndex": 0,
+          "SubPath": "jsmodules.build.manifest.json"
+        },
+        "Patterns": null
+      },
+      "ECommerce.Api.Customers.modules.json.gz": {
+        "Children": null,
+        "Asset": {
+          "ContentRootIndex": 1,
+          "SubPath": "2kszlnf86d-{0}-ysew0n4kjn-ysew0n4kjn.gz"
+        },
+        "Patterns": null
+      },
+      "_framework": {
+        "Children": {
+          "Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.Config.js": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 2,
+              "SubPath": "Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.Config.js"
+            },
+            "Patterns": null
+          },
+          "Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.Config.js.gz": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 1,
+              "SubPath": "074srr2a77-{0}-ovh1361pd0-ovh1361pd0.gz"
+            },
+            "Patterns": null
+          },
+          "Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.js": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 2,
+              "SubPath": "Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.js"
+            },
+            "Patterns": null
+          },
+          "Microsoft.NET.Sdk.BlazorWeb.HotReload.BrowserTools.js.gz": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 1,
+              "SubPath": "or8taqqcte-{0}-tchfgznwy8-tchfgznwy8.gz"
+            },
+            "Patterns": null
+          },
+          "Microsoft.NET.Sdk.BlazorWeb.HotReload.v1vy2to33n.lib.module.js": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 2,
+              "SubPath": "Microsoft.NET.Sdk.BlazorWeb.HotReload.lib.module.js"
+            },
+            "Patterns": null
+          },
+          "Microsoft.NET.Sdk.BlazorWeb.HotReload.v1vy2to33n.lib.module.js.gz": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 1,
+              "SubPath": "cyqn1oo7qs-{0}-v1vy2to33n-v1vy2to33n.gz"
+            },
+            "Patterns": null
+          }
+        },
+        "Asset": null,
+        "Patterns": null
+      }
+    },
+    "Asset": null,
+    "Patterns": null
+  }
+}

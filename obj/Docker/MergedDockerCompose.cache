@@ -1,0 +1,19 @@
+name: dockercompose16771668780447903157
+services:
+  ecommerce.api.customers:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+    image: ecommerceapicustomers
+    networks:
+      default: null
+    build:
+      context: E:\course\ECommerce
+      dockerfile: ECommerce.Api.Customers/Dockerfile
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose16771668780447903157_default

@@ -1,0 +1,35 @@
+services:
+  ecommerce.api.customers:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - RabbitMQ__HostName=rabbitmq
+    ports:
+      - "5001:8080"
+
+  ecommerce.api.orders:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - RabbitMQ__HostName=rabbitmq
+    ports:
+      - "5002:8080"
+
+  ecommerce.api.products:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - RabbitMQ__HostName=rabbitmq
+    ports:
+      - "5003:8080"
+
+  ecommerce.api.search:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - RabbitMQ__HostName=rabbitmq
+      - Services__Customers=http://ecommerce.api.customers:8080
+      - Services__Orders=http://ecommerce.api.orders:8080
+      - Services__Products=http://ecommerce.api.products:8080
+    ports:
+      - "5004:8080"

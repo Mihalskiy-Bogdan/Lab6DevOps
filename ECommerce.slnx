@@ -1,4 +1,7 @@
 <Solution>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
   <Project Path="ECommerce.Api.Customers/ECommerce.Api.Customers.csproj" />
   <Project Path="ECommerce.Api.Orders/ECommerce.Api.Orders.csproj" />
   <Project Path="ECommerce.Api.Products.Tests/ECommerce.Api.Products.Tests.csproj" Id="ced5dbae-9ff3-4bb6-b4f0-98d80db2f662" />

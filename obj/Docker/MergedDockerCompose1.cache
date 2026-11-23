@@ -1,0 +1,115 @@
+name: dockercompose16771668780447903157
+services:
+  ecommerce.api.customers:
+    container_name: ecommerce-api-customers
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      RabbitMQ__HostName: rabbitmq
+    image: ecommerceapicustomers
+    networks:
+      default: null
+    build:
+      context: E:\course\ECommerce
+      dockerfile: ECommerce.Api.Customers/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+        required: true
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "5001"
+        protocol: tcp
+  ecommerce.api.orders:
+    container_name: ecommerce-api-orders
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      RabbitMQ__HostName: rabbitmq
+    image: ecommerceapiorders
+    networks:
+      default: null
+    build:
+      context: E:\course\ECommerce
+      dockerfile: ECommerce.Api.Orders/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+        required: true
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "5002"
+        protocol: tcp
+  ecommerce.api.products:
+    container_name: ecommerce-api-products
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      RabbitMQ__HostName: rabbitmq
+    image: ecommerceapiproducts
+    networks:
+      default: null
+    build:
+      context: E:\course\ECommerce
+      dockerfile: ECommerce.Api.Products/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+        required: true
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "5003"
+        protocol: tcp
+  ecommerce.api.search:
+    container_name: ecommerce-api-search
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      RabbitMQ__HostName: rabbitmq
+    image: ecommerceapisearch
+    networks:
+      default: null
+    build:
+      context: E:\course\ECommerce
+      dockerfile: ECommerce.Api.Search/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+        required: true
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "5004"
+        protocol: tcp
+  rabbitmq:
+    container_name: ecommerce-rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_USER: guest
+    image: rabbitmq:3-management
+    networks:
+      default: null
+    healthcheck:
+      test:
+        - CMD
+        - rabbitmq-diagnostics
+        - -q
+        - ping
+      timeout: 5s
+      interval: 10s
+      retries: 5
+    ports:
+      - mode: ingress
+        target: 5672
+        published: "5672"
+        protocol: tcp
+      - mode: ingress
+        target: 15672
+        published: "15672"
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose16771668780447903157_default

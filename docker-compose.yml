@@ -1,0 +1,55 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: ecommerce-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  ecommerce.api.customers:
+    image: ${DOCKER_REGISTRY-}ecommerceapicustomers
+    container_name: ecommerce-api-customers
+    build:
+      context: .
+      dockerfile: ECommerce.Api.Customers/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  ecommerce.api.orders:
+    image: ${DOCKER_REGISTRY-}ecommerceapiorders
+    container_name: ecommerce-api-orders
+    build:
+      context: .
+      dockerfile: ECommerce.Api.Orders/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  ecommerce.api.products:
+    image: ${DOCKER_REGISTRY-}ecommerceapiproducts
+    container_name: ecommerce-api-products
+    build:
+      context: .
+      dockerfile: ECommerce.Api.Products/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  ecommerce.api.search:
+    image: ${DOCKER_REGISTRY-}ecommerceapisearch
+    container_name: ecommerce-api-search
+    build:
+      context: .
+      dockerfile: ECommerce.Api.Search/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
